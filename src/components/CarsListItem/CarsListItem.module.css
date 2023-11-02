@@ -1,0 +1,76 @@
+.carsListItem {
+  position: relative;
+  width: 274px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carImg {
+  height: 268px;
+  width: 274px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 23, 0.5) 2.5%,
+    rgba(18, 20, 23, 0) 41.07%
+  );
+}
+
+.carDataWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.carData {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.model {
+  color: #3470ff;
+}
+
+.carDetailsWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.carDetails {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container svg {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  height: 18px;
+  width: 18px;
+  transition: all 0.3s;
+}
+
+.container svg:hover {
+  transform: scale(1.1);
+}

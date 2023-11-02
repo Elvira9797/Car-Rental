@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('assets/fonts/Manrope-Bold.eot');
+  src: url('assets/fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Manrope-Bold.woff2') format('woff2'),
+    url('assets/fonts/Manrope-Bold.woff') format('woff'),
+    url('assets/fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('assets/fonts/Manrope-Medium.eot');
+  src: url('assets/fonts/Manrope-Medium.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Manrope-Medium.woff2') format('woff2'),
+    url('assets/fonts/Manrope-Medium.woff') format('woff'),
+    url('assets/fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('assets/fonts/Manrope-Regular.eot');
+  src: url('assets/fonts/Manrope-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('assets/fonts/Manrope-Regular.woff2') format('woff2'),
+    url('assets/fonts/Manrope-Regular.woff') format('woff'),
+    url('assets/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: 'Manrope';
+  src: url('assets/fonts/Manrope-Semibold.eot');
+  src: url('assets/fonts/Manrope-SemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('assets/fonts/Manrope-SemiBold.woff2') format('woff2'),
+    url('assets/fonts/Manrope-SemiBold.woff') format('woff'),
+    url('assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+} */
+
+body {
+  font-family: 'Manrope';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
