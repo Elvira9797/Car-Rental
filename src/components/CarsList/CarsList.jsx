@@ -1,11 +1,22 @@
 import CarsListItem from 'components/CarsListItem';
 import { useSelector } from 'react-redux';
-import { selectCars } from 'redux/selectors';
+import { selectCars, selectFilter } from 'redux/selectors';
 import css from './CarsList.module.css';
 import { Flex } from '@mantine/core';
 
 const CarsList = () => {
   const cars = useSelector(selectCars);
+
+  const filterValue = useSelector(selectFilter);
+
+  const getFilteredContacts = () => {
+    const formatedFiltered = filterValue.toLowerCase();
+    return cars.filter(({ make }) =>
+      make.toLowerCase().includes(formatedFiltered)
+    );
+  };
+
+  const filteredContacts = getFilteredContacts();
 
   return (
     <Flex
@@ -17,7 +28,7 @@ const CarsList = () => {
       wrap="wrap"
       className={css.carsList}
     >
-      {cars.map(car => {
+      {filteredContacts.map(car => {
         return <CarsListItem key={car.id} car={car} />;
       })}
     </Flex>

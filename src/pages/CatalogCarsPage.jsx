@@ -1,3 +1,4 @@
+import BrandFilter from 'components/BrandFilter/BrandFilter';
 import CarsList from 'components/CarsList/CarsList';
 import Loader from 'components/Loader/Loader';
 import { useEffect } from 'react';
@@ -18,6 +19,7 @@ const CatalogCarsPage = () => {
   return (
     <div>
       {isLoading && !error && <Loader />}
+      <BrandFilter />
       {cars?.length > 0 ? <CarsList /> : <p>There aren't any cars</p>}
     </div>
   );
