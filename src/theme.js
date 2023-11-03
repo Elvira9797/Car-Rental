@@ -5,11 +5,8 @@ const theme = createTheme({
   black: '#111',
   primaryShade: 4,
   colors: {
-    // TODO: Добавить больше цветов
-    dark: [
-      '#121417',
-      '#000000', // brand dark.9
-    ],
+    light: ['#f9f9f9'],
+    dark: ['#121417', '#000000'],
     gray: ['#F7F7FB', '#8A8A89'],
     blue: ['#3470FF', '#0B44CD'],
   },

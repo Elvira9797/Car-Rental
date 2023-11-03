@@ -23,7 +23,7 @@
 }
 
 .model {
-  color: #3470ff;
+  color: var(--mantine-color-blue-0);
 }
 
 .carDetailsWrapper {
@@ -40,7 +40,7 @@
 }
 
 .description {
-  color: #121417;
+  color: var(--mantine-color-dark-0);
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 24px;
@@ -69,11 +69,11 @@
 
   padding: 7px 14px;
   border-radius: 35px;
-  background: #f9f9f9;
+  background: var(--mantine-color-light-0);
 }
 
 .blue {
-  color: #3470ff;
+  color: var(--mantine-color-blue-0);
   font-weight: 600;
 }
 
