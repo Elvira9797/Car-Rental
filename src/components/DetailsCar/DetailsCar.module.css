@@ -1,0 +1,92 @@
+.modalContent {
+  padding: 40px;
+  max-width: 469px;
+}
+
+.carImg {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 23, 0.5) 2.5%,
+    rgba(18, 20, 23, 0) 41.07%
+  );
+}
+
+.carData {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+
+.model {
+  color: #3470ff;
+}
+
+.carDetailsWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.carDetails {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.description {
+  color: #121417;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+.accessories {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.conditionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.condition {
+  color: #363535;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+
+  padding: 7px 14px;
+  border-radius: 35px;
+  background: #f9f9f9;
+}
+
+.blue {
+  color: #3470ff;
+  font-weight: 600;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 12px 50px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  background: var(--mantine-color-blue-0);
+  color: var(--mantine-color-white);
+  margin-top: 24px;
+}

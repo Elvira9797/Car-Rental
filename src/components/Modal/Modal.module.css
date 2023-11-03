@@ -1,0 +1,55 @@
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid rgba(220, 227, 229, 0.8);
+  box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
+  background-color: white;
+  animation: fadeAnimOpen 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  animation: fadeAnimOpen 0.3s linear;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    top: 18px;
+    right: 18px;
+  }
+}
+
+.modal.closing {
+  animation: fadeAnimClose 0.3s linear;
+}
+
+@keyframes fadeAnimOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAnimClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
