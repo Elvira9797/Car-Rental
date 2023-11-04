@@ -1,13 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
-import { fetchCars } from './operations';
+import { fetchPartCars, fetchAllCars, fetchBrandCars } from './operations';
 import persistReducer from 'redux-persist/es/persistReducer';
 
 const initialState = {
-  cars: [],
+  partCars: [],
+  allCars: [],
+  filteredCars: [],
   isLoading: false,
   error: null,
   selectedCars: [],
+  filter: '',
 };
 
 const carsSlice = createSlice({
@@ -23,19 +26,46 @@ const carsSlice = createSlice({
         state.selectedCars.push(carId);
       }
     },
+    filter(state, action) {
+      state.filter = action.payload;
+    },
   },
 
   extraReducers: builder => {
     builder
-      .addCase(fetchCars.pending, state => {
+      .addCase(fetchPartCars.pending, state => {
         state.isLoading = true;
       })
-      .addCase(fetchCars.fulfilled, (state, action) => {
+      .addCase(fetchPartCars.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.cars = action.payload;
+        state.partCars = action.payload;
       })
-      .addCase(fetchCars.rejected, (state, action) => {
+      .addCase(fetchPartCars.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(fetchAllCars.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(fetchAllCars.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.allCars = action.payload;
+      })
+      .addCase(fetchAllCars.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(fetchBrandCars.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(fetchBrandCars.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.filteredCars = action.payload;
+      })
+      .addCase(fetchBrandCars.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
@@ -52,4 +82,4 @@ export const persistedReducer = persistReducer(
   carsSlice.reducer
 );
 
-export const { toggleCarSelection } = carsSlice.actions;
+export const { toggleCarSelection, filter } = carsSlice.actions;

@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
 import { Suspense } from 'react';
 import { NavLink } from 'react-router-dom';
+import ScrollToTopButton from 'components/ScrollToTopButton';
 
 const Layout = () => {
   return (
@@ -58,6 +59,7 @@ const Layout = () => {
         <Suspense>
           <Outlet />
         </Suspense>
+        <ScrollToTopButton />
       </main>
     </div>
   );

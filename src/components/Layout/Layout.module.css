@@ -1,6 +1,7 @@
 .container {
   margin: 0 auto;
   padding: 0 30px;
+  padding-bottom: 60px;
 }
 
 .header {
@@ -27,8 +28,4 @@
   text-decoration: none;
   color: black;
   font-weight: 500;
-}
-
-.main {
-  margin-bottom: 100px;
 }

@@ -1,9 +1,9 @@
 import { Select } from '@mantine/core';
 import css from './BrandFilter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { filter } from 'redux/filterSlice';
 import { selectFilter } from 'redux/selectors';
+import { fetchBrandCars } from 'redux/operations';
+import { filter } from 'redux/carsSlice';
 
 const data = [
   'All',
@@ -35,11 +35,21 @@ const BrandFilter = () => {
 
   const selectedValue = useSelector(selectFilter);
 
-  const onChangeFilter = value => {
+  //   const onChangeFilter = value => {
+  //     if (value === 'All') {
+  //       dispatch(filter(''));
+  //     } else {
+  //       dispatch(filter(value));
+  //     }
+  //   };
+
+  const onChangeFilter = async value => {
+    await dispatch(fetchBrandCars(value));
+
     if (value === 'All') {
-      dispatch(filter(''));
+      await dispatch(filter(''));
     } else {
-      dispatch(filter(value));
+      await dispatch(filter(value));
     }
   };
 

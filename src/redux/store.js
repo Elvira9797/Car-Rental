@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistedReducer } from './carsSlice';
-import { filterReducer } from './filterSlice';
+
 import {
   persistStore,
   FLUSH,
@@ -14,7 +14,6 @@ import {
 export const store = configureStore({
   reducer: {
     cars: persistedReducer,
-    filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

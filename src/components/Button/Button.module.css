@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 44px;
+  padding: 12px 50px;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--mantine-color-white);
+  border: 1px solid var(--mantine-color-blue-0);
+  color: var(--mantine-color-blue-0);
+}
+
+.loadingButton {
+  /* background-color: #ccc; */
+  border: 1px solid #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
