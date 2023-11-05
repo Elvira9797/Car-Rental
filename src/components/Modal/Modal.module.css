@@ -16,8 +16,19 @@
   border: 1px solid rgba(220, 227, 229, 0.8);
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
   background-color: var(--mantine-color-white);
+  max-height: 90vh;
+  overflow-y: auto;
   animation: fadeAnimOpen 0.3s linear;
   transition: all 0.3s linear;
+}
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: var(--mantine-color-blue-0);
+  border-radius: 6px;
 }
 
 .closeBtn {

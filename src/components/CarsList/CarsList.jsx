@@ -1,16 +1,17 @@
 import CarsListItem from 'components/CarsListItem';
 import { useSelector } from 'react-redux';
-import { selectFilteredCars } from 'redux/selectors';
+import { selectfilteredCars } from 'redux/selectors';
 import css from './CarsList.module.css';
 import { Flex } from '@mantine/core';
 
 const CarsList = ({ cars }) => {
-  const filteredCars = useSelector(selectFilteredCars);
+  const filteredBrandCars = useSelector(selectfilteredCars);
 
-  const carsToRender = filteredCars.length > 0 ? filteredCars : cars;
+  const carsToRender = filteredBrandCars.length > 0 ? filteredBrandCars : cars;
 
   return (
     <Flex
+      as={'ul'}
       rowGap="50px"
       columnGap="24px"
       justify="center"

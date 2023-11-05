@@ -1,11 +1,16 @@
-import Button from 'components/Button/Button';
-import BrandFilter from 'components/BrandFilter/BrandFilter';
-import CarsList from 'components/CarsList/CarsList';
+import Button from 'components/Button';
+import BrandFilter from 'components/BrandFilter';
+import CarsList from 'components/CarsList';
 import Loader from 'components/Loader/Loader';
+import Container from 'components/Container';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPartCars } from 'redux/operations';
-import { selectError, selectIsLoading } from 'redux/selectors';
+import {
+  selectError,
+  selectIsLoading,
+  selectfilteredCars,
+} from 'redux/selectors';
 
 const CatalogCarsPage = () => {
   const [showButton, setShowButton] = useState(false);
@@ -15,6 +20,8 @@ const CatalogCarsPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+
+  const filteredCars = useSelector(selectfilteredCars);
 
   const loadMore = () => {
     dispatch(fetchPartCars(page + 1))
@@ -48,17 +55,17 @@ const CatalogCarsPage = () => {
       });
   }, [dispatch]);
 
-  useEffect(() => {
-    if (page !== 1) {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth',
-      });
-    }
-  }, [page]);
+  //   useEffect(() => {
+  //     if (page !== 1) {
+  //       window.scrollTo({
+  //         top: document.documentElement.scrollHeight,
+  //         behavior: 'smooth',
+  //       });
+  //     }
+  //   }, [page]);
 
   return (
-    <div>
+    <Container>
       {isLoading && !error && <Loader />}
       <BrandFilter />
       {currentCars?.length > 0 ? (
@@ -66,12 +73,12 @@ const CatalogCarsPage = () => {
       ) : (
         <p>There aren't any cars</p>
       )}
-      {showButton && (
+      {showButton && filteredCars.length === 0 && (
         <Button loadMore={loadMore} isLoading={isLoading}>
           Load More
         </Button>
       )}
-    </div>
+    </Container>
   );
 };
 

@@ -1,3 +1,32 @@
 .carsList {
   list-style-type: none;
 }
+
+.buttonWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 12px 50px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  background-color: var(--mantine-color-blue-0);
+  color: var(--mantine-color-white);
+  margin-top: 24px;
+  transition: background-color 350ms ease;
+}
+
+.button:hover {
+  background-color: var(--mantine-color-blue-1);
+}

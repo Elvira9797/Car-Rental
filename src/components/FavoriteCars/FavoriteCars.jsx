@@ -6,6 +6,7 @@ import { selectAllCars, selectSelectedCar } from 'redux/selectors';
 import css from './FavoriteCars.module.css';
 import { fetchAllCars } from 'redux/operations';
 import Button from 'components/Button';
+import { useNavigate } from 'react-router-dom';
 
 const FavoriteCars = () => {
   const cars = useSelector(selectAllCars);
@@ -13,6 +14,7 @@ const FavoriteCars = () => {
 
   const [visibleCars, setVisibleCars] = useState(12);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchAllCars());
@@ -25,30 +27,45 @@ const FavoriteCars = () => {
     setVisibleCars(prevVisibleCars => prevVisibleCars + 12);
   };
 
-  useEffect(() => {
-    if (visibleCars > 12) {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth',
-      });
-    }
-  }, [visibleCars]);
+  const handleClick = () => {
+    navigate('/catalog');
+  };
+
+  // useEffect(() => {
+  //   if (visibleCars > 12) {
+  //     window.scrollTo({
+  //       top: document.documentElement.scrollHeight,
+  //       behavior: 'smooth',
+  //     });
+  //   }
+  // }, [visibleCars]);
 
   return (
     <div>
-      <Flex
-        rowGap="50px"
-        columnGap="24px"
-        justify="center"
-        align="flex-start"
-        direction="row"
-        wrap="wrap"
-        className={css.carsList}
-      >
-        {carsToDisplay.map(car => {
-          return <CarsListItem key={car.id} car={car} />;
-        })}
-      </Flex>
+      {carsToDisplay.length === 0 ? (
+        <div className={css.buttonWrap}>
+          <h1 className={css.title}>
+            You have no selected cars. <br /> Go to the catalog
+          </h1>
+          <button className={css.button} onClick={handleClick}>
+            Catalog
+          </button>
+        </div>
+      ) : (
+        <Flex
+          rowGap="50px"
+          columnGap="24px"
+          justify="center"
+          align="flex-start"
+          direction="row"
+          wrap="wrap"
+          className={css.carsList}
+        >
+          {carsToDisplay.map(car => {
+            return <CarsListItem key={car.id} car={car} />;
+          })}
+        </Flex>
+      )}
       {visibleCars < filteredCars.length && (
         <Button loadMore={handleLoadMore} style={{ margin: '20px auto' }}>
           Load More

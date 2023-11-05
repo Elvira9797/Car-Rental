@@ -1,0 +1,22 @@
+.footer {
+  border-top: 1px solid var(--mantine-color-dark-0);
+  padding: 20px;
+}
+
+.created {
+  color: var(--mantine-color-dark-0);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.linkStyled {
+  color: var(--mantine-color-dark-0);
+  transition: color 250ms ease;
+}
+
+.linkStyled:hover {
+  color: var(--mantine-color-dark-0);
+}

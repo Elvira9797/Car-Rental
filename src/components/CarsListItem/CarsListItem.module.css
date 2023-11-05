@@ -85,6 +85,12 @@
   font-size: 14px;
   align-items: center;
   border-radius: 12px;
-  background: var(--mantine-color-blue-0);
+  background-color: var(--mantine-color-blue-0);
   color: var(--mantine-color-white);
+  margin-top: 24px;
+  transition: background-color 350ms ease;
+}
+
+.button:hover {
+  background-color: var(--mantine-color-blue-1);
 }

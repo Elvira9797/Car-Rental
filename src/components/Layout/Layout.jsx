@@ -4,9 +4,11 @@ import { Suspense } from 'react';
 import { NavLink } from 'react-router-dom';
 import ScrollToTopButton from 'components/ScrollToTopButton';
 
+import Footer from 'components/Footer';
+
 const Layout = () => {
   return (
-    <div className={css.container}>
+    <>
       <header className={css.header}>
         <nav id="nav">
           <ul className={css.navList}>
@@ -61,7 +63,8 @@ const Layout = () => {
         </Suspense>
         <ScrollToTopButton />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 };
 export default Layout;
