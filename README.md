@@ -1,6 +1,6 @@
 # Car Rental App
 
-Welcome to our innovative car rental application that's designed to make your
+Welcome to the innovative car rental application that's designed to make your
 car rental experience easy and enjoyable.
 
 ## Features
