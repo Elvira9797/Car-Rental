@@ -55,15 +55,15 @@ const CarsListItem = ({ car }) => {
         </div>
         <div className={css.carDetailsWrapper}>
           <span className={css.carDetails}>{city}</span>
-          <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+          <RxDividerVertical className={css.icon} />
           <span className={css.carDetails}>{country}</span>
-          <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+          <RxDividerVertical className={css.icon} />
           <span className={css.carDetails}>{car.rentalCompany}</span>
-          <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+          <RxDividerVertical className={css.icon} />
           <span className={css.carDetails}>{car.type}</span>
-          <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+          <RxDividerVertical className={css.icon} />
           <span className={css.carDetails}>{car.model}</span>
-          <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+          <RxDividerVertical className={css.icon} />
           <span className={css.carDetails}>{car.mileage}</span>
         </div>
         <button className={css.button} onClick={onOpen}>

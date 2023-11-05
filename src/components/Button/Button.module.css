@@ -15,6 +15,10 @@
   transition: border-color 350ms ease, color 350ms ease;
 }
 
+[data-mantine-color-scheme='dark'] .button {
+  background: transparent;
+}
+
 .button:hover {
   border-color: var(--mantine-color-blue-1);
   color: var(--mantine-color-blue-1);

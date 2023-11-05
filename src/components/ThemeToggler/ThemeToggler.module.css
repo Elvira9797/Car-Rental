@@ -1,0 +1,28 @@
+.icon {
+  color: var(--mantine-color-blue-4);
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: $mantine-breakpoint-md) {
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+[data-mantine-color-scheme='dark'] .dark {
+  display: block;
+}
+
+[data-mantine-color-scheme='light'] .dark {
+  display: none;
+}
+
+[data-mantine-color-scheme='light'] .light {
+  display: block;
+}
+
+[data-mantine-color-scheme='dark'] .light {
+  display: none;
+}

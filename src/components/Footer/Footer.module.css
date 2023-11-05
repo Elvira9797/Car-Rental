@@ -3,6 +3,10 @@
   padding: 20px;
 }
 
+[data-mantine-color-scheme='dark'] .footer {
+  border-color: var(--mantine-color-gray-1);
+}
+
 .created {
   color: var(--mantine-color-dark-0);
   text-align: center;
@@ -12,11 +16,23 @@
   gap: 4px;
 }
 
+[data-mantine-color-scheme='dark'] .created {
+  color: var(--mantine-color-gray-1);
+}
+
 .linkStyled {
   color: var(--mantine-color-dark-0);
   transition: color 250ms ease;
 }
 
+[data-mantine-color-scheme='dark'] .linkStyled {
+  color: var(--mantine-color-gray-1);
+}
+
 .linkStyled:hover {
   color: var(--mantine-color-dark-0);
+}
+
+[data-mantine-color-scheme='dark'] .linkStyled:hover {
+  color: var(--mantine-color-gray-2);
 }

@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import ScrollToTopButton from 'components/ScrollToTopButton';
 
 import Footer from 'components/Footer';
+import ThemeToggler from 'components/ThemeToggler';
 
 const Layout = () => {
   return (
@@ -56,6 +57,7 @@ const Layout = () => {
             </li>
           </ul>
         </nav>
+        <ThemeToggler />
       </header>
       <main className={css.main}>
         <Suspense>

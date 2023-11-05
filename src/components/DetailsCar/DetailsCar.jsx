@@ -22,19 +22,19 @@ const DetailsCar = ({ car }) => {
 
       <div className={css.carDetailsWrapper}>
         <span className={css.carDetails}>{city}</span>
-        <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+        <RxDividerVertical className={css.icon} />
         <span className={css.carDetails}>{country}</span>
-        <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+        <RxDividerVertical className={css.icon} />
         <span className={css.carDetails}>Id: {car.id}</span>
-        <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+        <RxDividerVertical className={css.icon} />
         <span className={css.carDetails}>Year: {car.year}</span>
-        <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+        <RxDividerVertical className={css.icon} />
         <span className={css.carDetails}>Type: {car.type}</span>
-        <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+        <RxDividerVertical className={css.icon} />
         <span className={css.carDetails}>
           Fuel Consumption: {car.fuelConsumption}
         </span>
-        <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+        <RxDividerVertical className={css.icon} />
         <span className={css.carDetails}>Engine Size: {car.engineSize}</span>
       </div>
 
@@ -48,7 +48,7 @@ const DetailsCar = ({ car }) => {
             <React.Fragment key={index}>
               <span className={css.carDetails}>{item}</span>
               {index !== accessoriesAndFunc.length - 1 && (
-                <RxDividerVertical color="rgba(18, 20, 23, 0.10)" />
+                <RxDividerVertical className={css.icon} />
               )}
             </React.Fragment>
           );

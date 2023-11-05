@@ -30,6 +30,10 @@
   line-height: 24px;
 }
 
+[data-mantine-color-scheme='dark'] .carData {
+  color: var(--mantine-color-white);
+}
+
 .model {
   color: #3470ff;
 }
@@ -45,6 +49,18 @@
   color: rgba(18, 20, 23, 0.5);
   font-size: 12px;
   line-height: 18px;
+}
+
+[data-mantine-color-scheme='dark'] .carDetails {
+  color: var(--mantine-color-gray-1);
+}
+
+.icon {
+  color: rgba(18, 20, 23, 0.1);
+}
+
+[data-mantine-color-scheme='dark'] .icon {
+  color: var(--mantine-color-gray-1);
 }
 
 .container input {

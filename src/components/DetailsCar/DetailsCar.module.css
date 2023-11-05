@@ -22,6 +22,10 @@
   margin-bottom: 9px;
 }
 
+[data-mantine-color-scheme='dark'] .carData {
+  color: var(--mantine-color-white);
+}
+
 .model {
   color: var(--mantine-color-blue-0);
 }
@@ -39,11 +43,27 @@
   line-height: 18px;
 }
 
+[data-mantine-color-scheme='dark'] .carDetails {
+  color: var(--mantine-color-gray-1);
+}
+
+.icon {
+  color: rgba(18, 20, 23, 0.1);
+}
+
+[data-mantine-color-scheme='dark'] .icon {
+  color: var(--mantine-color-gray-1);
+}
+
 .description {
   color: var(--mantine-color-dark-0);
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 24px;
+}
+
+[data-mantine-color-scheme='dark'] .description {
+  color: var(--mantine-color-white);
 }
 
 .accessories {
@@ -52,6 +72,10 @@
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 8px;
+}
+
+[data-mantine-color-scheme='dark'] .accessories {
+  color: var(--mantine-color-white);
 }
 
 .conditionWrapper {
@@ -70,6 +94,11 @@
   padding: 7px 14px;
   border-radius: 35px;
   background: var(--mantine-color-light-0);
+}
+
+[data-mantine-color-scheme='dark'] .condition {
+  background: #26292c;
+  color: var(--mantine-color-white);
 }
 
 .blue {
