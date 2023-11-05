@@ -40,7 +40,7 @@ body {
 }
 
 [data-mantine-color-scheme='dark'] body {
-  color: #121212;
+  background-color: #121212;
 }
 
 h1,
