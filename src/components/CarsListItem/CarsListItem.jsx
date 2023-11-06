@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleCarSelection } from 'redux/carsSlice';
 import { useState } from 'react';
 import ModalDetailCar from '../ModalDetailsCar';
+import AnimationList from 'components/AnimationList/AnimationList';
 
 const CarsListItem = ({ car }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const CarsListItem = ({ car }) => {
 
   const [, city, country] = car.address.split(', ');
   return (
-    <>
+    <AnimationList>
       <li className={css.carsListItem}>
         <label className={css.container}>
           <input
@@ -72,7 +73,7 @@ const CarsListItem = ({ car }) => {
         </button>
       </li>
       {isOpen && <ModalDetailCar onClose={onClose} car={car} />}
-    </>
+    </AnimationList>
   );
 };
 
