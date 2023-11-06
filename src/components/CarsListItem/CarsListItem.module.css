@@ -96,7 +96,7 @@
   height: 18px;
   width: 18px;
   transition: all 0.3s;
-  z-index: 300;
+  z-index: 10;
 }
 
 .container svg:hover {
