@@ -6,11 +6,22 @@
 }
 
 .carImg {
+  position: relative;
   height: 268px;
   width: 274px;
+
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 14px;
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 268px;
+  width: 274px;
+
   background: linear-gradient(
     180deg,
     rgba(18, 20, 23, 0.5) 2.5%,
@@ -85,6 +96,7 @@
   height: 18px;
   width: 18px;
   transition: all 0.3s;
+  z-index: 300;
 }
 
 .container svg:hover {

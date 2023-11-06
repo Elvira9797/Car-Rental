@@ -46,6 +46,7 @@ const CarsListItem = ({ car }) => {
         </label>
 
         <img className={css.carImg} src={car.img} alt={car.model} />
+        <div className={css.thumb}></div>
         <div className={css.carDataWrapper}>
           <p className={css.carData}>
             {car.make} <span className={css.model}>{car?.model}</span>,{' '}

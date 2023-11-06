@@ -55,15 +55,6 @@ const CatalogCarsPage = () => {
       });
   }, [dispatch]);
 
-  //   useEffect(() => {
-  //     if (page !== 1) {
-  //       window.scrollTo({
-  //         top: document.documentElement.scrollHeight,
-  //         behavior: 'smooth',
-  //       });
-  //     }
-  //   }, [page]);
-
   return (
     <Container>
       {isLoading && !error && <Loader />}
