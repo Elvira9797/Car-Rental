@@ -41,16 +41,3 @@ export const fetchBrandCars = createAsyncThunk(
     }
   }
 );
-
-export const fetchPriceCars = createAsyncThunk(
-  'cars/fetchPrice',
-  async (price, { rejectWithValue }) => {
-    try {
-      const respond = await axios.get(`/cars?rentalPrice=${price}`);
-
-      return respond.data;
-    } catch (error) {
-      return rejectWithValue(error.message);
-    }
-  }
-);

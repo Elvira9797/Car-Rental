@@ -40,7 +40,7 @@ body {
 }
 
 [data-mantine-color-scheme='dark'] body {
-  background-color: #121212;
+  background-color: var(--mantine-color-dark-2);
 }
 
 h1,

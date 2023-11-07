@@ -6,7 +6,7 @@ const theme = createTheme({
   primaryShade: 4,
   colors: {
     light: ['#f9f9f9'],
-    dark: ['#121417', '#000000'],
+    dark: ['#121417', '#000000', '#121212'],
     gray: ['#F7F7FB', '#8A8A89'],
     blue: ['#3470FF', '#0B44CD'],
   },

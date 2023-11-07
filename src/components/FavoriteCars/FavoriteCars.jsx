@@ -20,8 +20,8 @@ const FavoriteCars = () => {
     dispatch(fetchAllCars());
   }, [dispatch]);
 
-  const filteredCars = cars.filter(car => isSelected.includes(car.id));
-  const carsToDisplay = filteredCars.slice(0, visibleCars);
+  const favoriteCars = cars.filter(car => isSelected.includes(car.id));
+  const carsToDisplay = favoriteCars.slice(0, visibleCars);
 
   const handleLoadMore = () => {
     setVisibleCars(prevVisibleCars => prevVisibleCars + 12);
@@ -30,15 +30,6 @@ const FavoriteCars = () => {
   const handleClick = () => {
     navigate('/catalog');
   };
-
-  // useEffect(() => {
-  //   if (visibleCars > 12) {
-  //     window.scrollTo({
-  //       top: document.documentElement.scrollHeight,
-  //       behavior: 'smooth',
-  //     });
-  //   }
-  // }, [visibleCars]);
 
   return (
     <div>
@@ -66,7 +57,7 @@ const FavoriteCars = () => {
           })}
         </Flex>
       )}
-      {visibleCars < filteredCars.length && (
+      {visibleCars < favoriteCars.length && (
         <Button loadMore={handleLoadMore} style={{ margin: '20px auto' }}>
           Load More
         </Button>
