@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Car-Rental/static/css/main.f950254a.css",
-    "main.js": "/Car-Rental/static/js/main.88feaf49.js",
+    "main.css": "/Car-Rental/static/css/main.1ed45e07.css",
+    "main.js": "/Car-Rental/static/js/main.c3ab2ba6.js",
     "static/css/468.5eeefa2c.chunk.css": "/Car-Rental/static/css/468.5eeefa2c.chunk.css",
     "static/js/468.c6c4e0f5.chunk.js": "/Car-Rental/static/js/468.c6c4e0f5.chunk.js",
     "static/css/278.51848989.chunk.css": "/Car-Rental/static/css/278.51848989.chunk.css",
@@ -25,8 +25,8 @@
     "static/media/Manrope-Medium.woff2": "/Car-Rental/static/media/Manrope-Medium.9cccfee0f8d3153ae547.woff2",
     "static/media/Manrope-Regular.woff2": "/Car-Rental/static/media/Manrope-Regular.cb78aabfaaf5d95c8665.woff2",
     "index.html": "/Car-Rental/index.html",
-    "main.f950254a.css.map": "/Car-Rental/static/css/main.f950254a.css.map",
-    "main.88feaf49.js.map": "/Car-Rental/static/js/main.88feaf49.js.map",
+    "main.1ed45e07.css.map": "/Car-Rental/static/css/main.1ed45e07.css.map",
+    "main.c3ab2ba6.js.map": "/Car-Rental/static/js/main.c3ab2ba6.js.map",
     "468.5eeefa2c.chunk.css.map": "/Car-Rental/static/css/468.5eeefa2c.chunk.css.map",
     "468.c6c4e0f5.chunk.js.map": "/Car-Rental/static/js/468.c6c4e0f5.chunk.js.map",
     "278.51848989.chunk.css.map": "/Car-Rental/static/css/278.51848989.chunk.css.map",
@@ -37,7 +37,7 @@
     "150.75c602ba.chunk.js.map": "/Car-Rental/static/js/150.75c602ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f950254a.css",
-    "static/js/main.88feaf49.js"
+    "static/css/main.1ed45e07.css",
+    "static/js/main.c3ab2ba6.js"
   ]
 }
