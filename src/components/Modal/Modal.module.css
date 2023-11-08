@@ -44,6 +44,10 @@
   animation: fadeAnimOpen 0.3s linear;
 }
 
+[data-mantine-color-scheme='dark'] .closeBtn {
+  stroke: var(--mantine-color-white);
+}
+
 .modal.closing {
   animation: fadeAnimClose 0.3s linear;
 }
