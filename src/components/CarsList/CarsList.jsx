@@ -11,7 +11,7 @@ const CarsList = ({ cars }) => {
 
   return (
     <Flex
-      as={'ul'}
+      as="ul"
       rowGap="50px"
       columnGap="24px"
       justify="center"

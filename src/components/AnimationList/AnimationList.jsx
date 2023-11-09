@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const AnimationList = ({ children }) => {
+const AnimationList = ({ children, style }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -14,14 +14,15 @@ const AnimationList = ({ children }) => {
   };
 
   return (
-    <motion.div
+    <motion.li
       ref={ref}
+      style={style}
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       variants={variants}
     >
       {children}
-    </motion.div>
+    </motion.li>
   );
 };
 

@@ -31,47 +31,53 @@ const CarsListItem = ({ car }) => {
 
   const [, city, country] = car.address.split(', ');
   return (
-    <AnimationList>
-      <li className={css.carsListItem}>
-        <label className={css.container}>
-          <input
-            type="checkbox"
-            checked={isSelected}
-            onChange={handleCheckboxChange}
-          />
-          {isSelected ? (
-            <BsSuitHeartFill color="#3470FF" />
-          ) : (
-            <BsSuitHeart color="white" />
-          )}
-        </label>
+    <AnimationList
+      style={{
+        position: 'relative',
+        width: '274px',
+        overflow: 'hidden',
+        borderRadius: '12px',
+      }}
+    >
+      <label className={css.container}>
+        <input
+          type="checkbox"
+          checked={isSelected}
+          onChange={handleCheckboxChange}
+        />
+        {isSelected ? (
+          <BsSuitHeartFill color="#3470FF" />
+        ) : (
+          <BsSuitHeart color="white" />
+        )}
+      </label>
 
-        <img className={css.carImg} src={car.img} alt={car.model} />
-        <div className={css.thumb}></div>
-        <div className={css.carDataWrapper}>
-          <p className={css.carData}>
-            {car.make} <span className={css.model}>{car?.model}</span>,{' '}
-            {car?.year}
-          </p>
-          <span className={css.carData}>{car.rentalPrice}</span>
-        </div>
-        <div className={css.carDetailsWrapper}>
-          <span className={css.carDetails}>{city}</span>
-          <RxDividerVertical className={css.icon} />
-          <span className={css.carDetails}>{country}</span>
-          <RxDividerVertical className={css.icon} />
-          <span className={css.carDetails}>{car.rentalCompany}</span>
-          <RxDividerVertical className={css.icon} />
-          <span className={css.carDetails}>{car.type}</span>
-          <RxDividerVertical className={css.icon} />
-          <span className={css.carDetails}>{car.model}</span>
-          <RxDividerVertical className={css.icon} />
-          <span className={css.carDetails}>{car.mileage}</span>
-        </div>
-        <button className={css.button} onClick={onOpen}>
-          Learn more
-        </button>
-      </li>
+      <img className={css.carImg} src={car.img} alt={car.model} />
+      <div className={css.thumb}></div>
+      <div className={css.carDataWrapper}>
+        <p className={css.carData}>
+          {car.make} <span className={css.model}>{car?.model}</span>,{' '}
+          {car?.year}
+        </p>
+        <span className={css.carData}>{car.rentalPrice}</span>
+      </div>
+      <div className={css.carDetailsWrapper}>
+        <span className={css.carDetails}>{city}</span>
+        <RxDividerVertical className={css.icon} />
+        <span className={css.carDetails}>{country}</span>
+        <RxDividerVertical className={css.icon} />
+        <span className={css.carDetails}>{car.rentalCompany}</span>
+        <RxDividerVertical className={css.icon} />
+        <span className={css.carDetails}>{car.type}</span>
+        <RxDividerVertical className={css.icon} />
+        <span className={css.carDetails}>{car.model}</span>
+        <RxDividerVertical className={css.icon} />
+        <span className={css.carDetails}>{car.mileage}</span>
+      </div>
+      <button className={css.button} onClick={onOpen}>
+        Learn more
+      </button>
+
       {isOpen && <ModalDetailCar onClose={onClose} car={car} />}
     </AnimationList>
   );
