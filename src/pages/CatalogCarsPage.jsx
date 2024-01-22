@@ -53,7 +53,7 @@ const CatalogCarsPage = () => {
       .catch(error => {
         console.error('Error while fetching initial cars:', error);
       });
-  }, [dispatch]);
+  }, [dispatch, filteredCars]);
 
   return (
     <Container>

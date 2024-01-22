@@ -63,7 +63,11 @@ const carsSlice = createSlice({
       .addCase(fetchBrandCars.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.filteredCars = action.payload;
+        if (state.filter === '') {
+          state.filteredCars = [];
+        } else {
+          state.filteredCars = action.payload;
+        }
       })
       .addCase(fetchBrandCars.rejected, (state, action) => {
         state.isLoading = false;

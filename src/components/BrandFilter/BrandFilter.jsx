@@ -36,12 +36,13 @@ const BrandFilter = () => {
   const selectedValueBrand = useSelector(selectFilter);
 
   const onChangeFilter = async value => {
-    await dispatch(fetchBrandCars(value));
-
     if (value === 'All') {
       await dispatch(filter(''));
+
+      await dispatch(fetchBrandCars(''));
     } else {
       await dispatch(filter(value));
+      await dispatch(fetchBrandCars(value));
     }
   };
 
